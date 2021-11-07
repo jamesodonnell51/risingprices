@@ -1,0 +1,235 @@
+/*
+This is a good layout for a mobile-first CSS template.
+Following this flow will minimize the number of styles you need to write and will ensure you are thinking, designing and developing mobile-first.
+Most of your styles get written like standard CSS, but for your mobile presentation. Generally speaking, a good mobile presention will stretch out nicely for larger screens.
+Sometimes, when we stretch out to larger screens, we need to make minor tweaks for the larger devices -- you can make these tweaks in the tablet media query, or if the issue exists on desktop only, the desktop media query.
+You will find this is far easier than the opposite task of using CSS to cram your desktop experience into a mobile device.
+*/
+/*********************************************************************
+ LOADS IN A NICE RESET TO ENSURE ALL BROWSERS HAVE THE SAME BASE STYLES
+*********************************************************************/
+@import url('https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css');
+
+/*********************************************************************
+  YOUR MOBILE/BASE STYLES GO HERE
+*********************************************************************/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    /* Sets default font-size to 16px, ensuring 1em = 16px; */
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+  text-align:left;
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+h4 {
+  font-size: 14px;
+}
+
+p {
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+/* Formatting for icons/graphics */
+
+.iconimage {
+  width: 12%;
+  padding-left: 6px;
+  margin-left: 8px;
+  margin-right: 8px;
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.iconname {
+  text-align: left;
+  margin-left: 4px;
+    width: 18%;
+}
+
+.meterimage {
+  width: 190px;
+  height: 37px;
+  padding-top: 21px;
+  width: 40%;
+  margin-left: 8px;
+}
+
+.percentchange {
+  text-align: right;
+  width: 19%;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-left: 5px;
+}
+
+/* Formatting for IDs */
+
+#charttitle {
+  text-align: center;
+  padding-bottom: 0px;
+}
+
+#BLScaption {
+  text-align: center;
+  font-style: italic;
+  font-size: 11px;
+}
+#tickcaption {
+  font-style: italic;
+  font-size: 11px;
+}
+
+#byline {
+  color: gray;
+}
+
+#topcopy {
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+#bottomcopy {
+  padding-top: 20px;
+}
+
+#sources {
+  padding-top: 20px;
+  font-size: 9px;
+}
+
+/* Formatting for containers */
+
+.flex {
+  display: flex;
+  max-width: 700px;
+
+  margin: 0 auto;
+
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.tickheading {
+  width: 22%;
+  margin-top: 10%;
+  margin-bottom: 3%;
+}
+.tickdescription {
+  width: 75%;
+  font-size: 13px;
+  text-align: left;
+  margin-left: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+#tickexplanation {
+  font-size: 10px;
+}
+.flex.heading {
+  display: flex;
+  flex-direcction: row;
+  padding-left: 20px;
+  padding-right: 25px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
+
+
+.container {
+  display:block;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.container.photo {
+  padding: 0px;
+}
+
+.caption {
+  text-align: left;
+  font-size: 13px;
+}
+
+.captionsmall {
+  font-style: italic;
+  font-size: 9px;
+  text-align: left;
+}
+
+/*********************************************************************
+  YOUR TABLET/DESKTOP STYLES GO HERE
+*********************************************************************/
+@media(min-width: 681px) {
+    /* Any adjustments for tablets and larger go here.
+    Note these styles will be applied to anything 681px or larger -- so tablet AND desktop */
+
+.iconimage {
+  width: 60px;
+  height: 60px;
+}
+
+.iconname {
+  margin-left: 18px;
+}
+
+.flex {
+  padding-top: 8px;
+  padding-bottom: 5px;
+}
+
+.percentchange {
+  width: 23%;
+  padding-left: 20px;
+}
+
+.iconname {
+  width: 25%;
+}
+
+.tickheading {
+width: 15%;
+padding-top: 3%;
+margin-left: 4%;
+margin-top: 2%;
+}
+
+.tickdescription {
+  font-size: 13px;
+  text-align: left;
+  width: 90%;
+  margin-left: 4%;
+  margin-top: 2%;
+}
+
+/*********************************************************************
+  YOUR DESKTOP-ONLY STYLES GO HERE
+*********************************************************************/
+@media(min-width: 729px) {
+    /* Any adjustments for desktop and larger go here.
+    Note these styles will be applied to anything 729px or larger -- so desktop */
+}
